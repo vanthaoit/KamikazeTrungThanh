@@ -8,5 +8,6 @@ namespace KamikazeTrungThanh.UnitTest
 {
     class Class1
     {
+
     }
 }
