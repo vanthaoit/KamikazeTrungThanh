@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamikazeTrungThanh.Common", "KamikazeTrungThanh.Common\KamikazeTrungThanh.Common.csproj", "{3AEC2D00-5979-46E7-AAA4-DFBAD3565E48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamikazeTrungThanh.Data", "KamikazeTrungThanh.Data\KamikazeTrungThanh.Data.csproj", "{128F55D0-6E08-47EF-930E-65EC533E5BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamikazeTrungThanh.Model", "KamikazeTrungThanh.Model\KamikazeTrungThanh.Model.csproj", "{8F8E5300-E4CB-46BC-8D5C-74E8D31CED35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamikazeTrungThanh.Service", "KamikazeTrungThanh.Service\KamikazeTrungThanh.Service.csproj", "{2F04CC95-CDF9-4AEF-AC90-7C297A85E6D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamikazeTrungThanh.UnitTest", "KamikazeTrungThanh.UnitTest\KamikazeTrungThanh.UnitTest.csproj", "{563B8F24-BBD5-4F51-B826-B85E38E7A9DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamikazeTrungThanh.Web", "KamikazeTrungThanh.Web\KamikazeTrungThanh.Web.csproj", "{11DA14AC-695E-4AAE-A44C-D585E68BD767}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AEC2D00-5979-46E7-AAA4-DFBAD3565E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEC2D00-5979-46E7-AAA4-DFBAD3565E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEC2D00-5979-46E7-AAA4-DFBAD3565E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEC2D00-5979-46E7-AAA4-DFBAD3565E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128F55D0-6E08-47EF-930E-65EC533E5BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128F55D0-6E08-47EF-930E-65EC533E5BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128F55D0-6E08-47EF-930E-65EC533E5BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128F55D0-6E08-47EF-930E-65EC533E5BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F8E5300-E4CB-46BC-8D5C-74E8D31CED35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F8E5300-E4CB-46BC-8D5C-74E8D31CED35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F8E5300-E4CB-46BC-8D5C-74E8D31CED35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F8E5300-E4CB-46BC-8D5C-74E8D31CED35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F04CC95-CDF9-4AEF-AC90-7C297A85E6D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F04CC95-CDF9-4AEF-AC90-7C297A85E6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F04CC95-CDF9-4AEF-AC90-7C297A85E6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F04CC95-CDF9-4AEF-AC90-7C297A85E6D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{563B8F24-BBD5-4F51-B826-B85E38E7A9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563B8F24-BBD5-4F51-B826-B85E38E7A9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563B8F24-BBD5-4F51-B826-B85E38E7A9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563B8F24-BBD5-4F51-B826-B85E38E7A9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11DA14AC-695E-4AAE-A44C-D585E68BD767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DA14AC-695E-4AAE-A44C-D585E68BD767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DA14AC-695E-4AAE-A44C-D585E68BD767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DA14AC-695E-4AAE-A44C-D585E68BD767}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
