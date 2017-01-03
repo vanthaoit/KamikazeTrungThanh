@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Công ty Trung Thanh</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="One Movies Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="~/Assets/client/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Assets/client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Assets/client/css/custom.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Assets/client/css/contactstyle.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Assets/client/css/faqstyle.css" type="text/css" media="all" />
+    <link href="~/Assets/client/css/single.css" rel='stylesheet' type='text/css' />
+    <link href="~/Assets/client/css/medile.css" rel='stylesheet' type='text/css' />
+    <!-- banner-slider -->
+    <link href="~/Assets/client/css/jquery.slidey.min.css" rel="stylesheet">
+    <!-- //banner-slider -->
+    <!-- pop-up -->
+    <link href="~/Assets/client/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //pop-up -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="~/Assets/client/css/font-awesome.min.css" />
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script type="text/javascript" src="~/Assets/client/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="~/Assets/client/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Assets/client/js/easing.js"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+
+
+    <!-- start-smoth-scrolling -->
+    
+</head>
+
+<body>
+    <!-- header -->
+    @{ Html.RenderAction("Header","Home"); }
+    <!-- //header -->
+    <!-- bootstrap-pop-up -->
+    @{ Html.RenderAction("BoostrapPopUp","Home");}
+    <!-- //bootstrap-pop-up -->
+    <!-- nav -->
+    @{ Html.RenderAction("Navigation","Home");}
+    <!-- //nav -->
+    <!-- banner -->
+
+    <!-- //banner -->
+    @RenderBody()
+    <!-- banner-bottom -->
+  
+    <!-- //banner-bottom -->
+    <div class="general_social_icons">
+        <nav class="social">
+            <ul>
+                <li class="w3_twitter"><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+                <li class="w3_facebook"><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
+                <li class="w3_dribbble"><a href="#">Dribbble <i class="fa fa-dribbble"></i></a></li>
+                <li class="w3_g_plus"><a href="#">Google+ <i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- feature -->
+    
+    <!-- //feature -->
+    <!-- Latest-tv-series -->
+   
+    <!-- //Latest-tv-series -->
+    <!-- footer -->
+   @{ Html.RenderAction("Footer","Home");}
+    <!-- //footer -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Assets/client/js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
+});
+    </script>
+    <!-- //Bootstrap Core JavaScript -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+</html>

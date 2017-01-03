@@ -42,6 +42,20 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KamikazeTrungThanh.Common\KamikazeTrungThanh.Common.csproj">
+      <Project>{3aec2d00-5979-46e7-aaa4-dfbad3565e48}</Project>
+      <Name>KamikazeTrungThanh.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KamikazeTrungThanh.Data\KamikazeTrungThanh.Data.csproj">
+      <Project>{128f55d0-6e08-47ef-930e-65ec533e5bb0}</Project>
+      <Name>KamikazeTrungThanh.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KamikazeTrungThanh.Model\KamikazeTrungThanh.Model.csproj">
+      <Project>{8f8e5300-e4cb-46bc-8d5c-74e8d31ced35}</Project>
+      <Name>KamikazeTrungThanh.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
