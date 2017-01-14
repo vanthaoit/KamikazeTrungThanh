@@ -224,8 +224,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\components\homeController.js" />
-    <Content Include="app\components\homeView.html" />
+    <Content Include="app\components\home\homeController.js" />
+    <Content Include="app\components\home\homeView.html" />
+    <Content Include="app\shared\directives\pageDirective.html" />
+    <Content Include="app\shared\directives\pageDirective.js" />
     <Content Include="app\shared\modules\kamikazeTrungThanh.common.js" />
     <Content Include="app\shared\views\baseView.html" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
@@ -4882,8 +4884,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Assets\client\fonts\fontawesome-webfont.eot" />
     <Content Include="Assets\client\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\client\fonts\fontawesome-webfont.woff" />
@@ -5124,18 +5124,6 @@
     <Content Include="Assets\admin\libs\toastr\toastr.js.map" />
     <Content Include="Assets\admin\libs\toastr\toastr.less" />
     <Content Include="Assets\admin\libs\toastr\toastr.scss" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -5163,7 +5151,8 @@
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="app\shared\filters\" />
+    <Folder Include="app\shared\services\" />
     <Folder Include="Assets\client\template\" />
   </ItemGroup>
   <ItemGroup>
@@ -5172,7 +5161,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KamikazeTrungThanh.Common\KamikazeTrungThanh.Common.csproj">

@@ -1,5 +1,5 @@
 ﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
-(function () {
+(function (app) {
     app.controller('homeController', homeController);
     function homeController() {
 
