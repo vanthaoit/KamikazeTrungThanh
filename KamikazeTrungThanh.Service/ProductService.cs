@@ -55,7 +55,11 @@ namespace KamikazeTrungThanh.Service
 
         public IEnumerable<Product> GetAll(string keyword)
         {
-            throw new NotImplementedException();
+            if (!string.IsNullOrEmpty(keyword))
+                return _productRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword));
+            else
+                return _productRepository.GetAll();
+
         }
 
         public IEnumerable<Product> GetAllByCategoryId(int id)

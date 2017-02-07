@@ -1,6 +1,10 @@
 ﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 (function () {
-    angular.module('kamikazeTrungThanh', ['kamikazeTrungThanh.common']).config(config);
+    angular.module('kamikazeTrungThanh', [
+                                            'kamikazeTrungThanh.product_categories',
+                                            'kamikazeTrungThanh.products',
+                                            'kamikazeTrungThanh.slides',
+                                            'kamikazeTrungThanh.common']).config(config);
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
     function config($stateProvider, $urlRouterProvider) {
         $stateProvider.state('base', {

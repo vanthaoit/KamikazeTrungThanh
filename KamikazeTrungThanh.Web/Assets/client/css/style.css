@@ -197,9 +197,16 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 .navbar .navbar-nav li a:hover{
     background:#FF8D1B;
 }
-.navbar .navbar-nav .open{
+/*.navbar .navbar-nav .open{
      background:#FF8D1B;
+}*/
+
+.navbar-right .dropdown-menu li .dropdown-menu-sub {
+    left: 40%;
+    top: auto;
+    margin-top: -30px;
 }
+
 .navbar-nav > li {
     float: left;
     border-right: 1px dotted #fff;

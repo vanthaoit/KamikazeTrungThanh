@@ -1,4 +1,7 @@
-﻿using System;
+﻿using KamikazeTrungThanh.Model.Models;
+using KamikazeTrungThanh.Service;
+using KamikazeTrungThanh.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +11,16 @@ namespace KamikazeTrungThanh.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private ISlideService _slideService;
+        private ICommonService _commonService;
+        private IProductCategoryService _productCategoryService;
+
+        public HomeController(ISlideService slideService,ICommonService commonService, IProductCategoryService productCategoryService)
+        {
+            _slideService = slideService;
+            _commonService = commonService;
+            _productCategoryService = productCategoryService;
+        }
         public ActionResult Index()
         {
             return View();
@@ -40,7 +53,9 @@ namespace KamikazeTrungThanh.Web.Controllers
         [ChildActionOnly]
         public ActionResult Banner()
         {
-            return PartialView();
+            var slideModel = _slideService.GetAll();
+            var slideViewModel = AutoMapper.Mapper.Map<IEnumerable<Slide>,IEnumerable<SlideViewModel>>(slideModel);
+            return PartialView(slideViewModel);
         }
 
         [ChildActionOnly]

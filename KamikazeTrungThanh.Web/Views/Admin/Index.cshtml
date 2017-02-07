@@ -10,9 +10,9 @@
     <!--toastr -->
     <link href="~/Assets/admin/libs/toastr/toastr.css" rel="stylesheet" />
     <!-- Font Awesome -->
-    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
-    @*<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">*@
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/Assets/admin/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -51,9 +51,52 @@
     <script src="~/Assets/admin/libs/angular-local-storage/dist/angular-local-storage.js"></script>
 
 
-    <script src="~/app/app.js"></script>
     <script src="~/app/shared/modules/kamikazeTrungThanh.common.js"></script>
+
+    <!--services-->
+    <script src="~/app/shared/services/apiService.js"></script>
+    <script src="~/app/shared/services/authenticationService.js"></script>
+    <script src="~/app/shared/services/notificationService.js"></script>
+    <script src="~/app/shared/services/commonService.js"></script>
+
+    <!--directives-->
+    <script src="~/app/shared/directives/pageDirective.js"></script>
+
+    <!--filters-->
+    <script src="~/app/shared/filters/statusFilter.js"></script>
+
+    <script src="~/app/app.js"></script>
+
+    <!--moddule-->
+    <script src="~/app/components/products/products.module.js"></script>
+
+    <script src="~/app/components/product_categories/productCategories.module.js"></script>
+
+    <script src="~/app/components/slides/slides.module.js"></script>
+
+
+
+
+    <!--products-->
  
+    <script src="~/app/components/products/productListController.js"></script>
+    <script src="~/app/components/products/productEditController.js"></script>
+    <script src="~/app/components/products/productAddController.js"></script>
+    <!--productCategories-->
+
+    <script src="~/app/components/product_categories/productCategoryListController.js"></script>
+    <script src="~/app/components/product_categories/productCategoryEditController.js"></script>
+    <script src="~/app/components/product_categories/productCategoryAddController.js"></script>
+    <!--slides-->
+    <script src="~/app/components/slides/slideListController.js"></script>
+    <script src="~/app/components/slides/slideEditController.js"></script>
+    <script src="~/app/components/slides/slideAddController.js"></script>
+
+
+    <!--login-->
+    
+
+    <!--home-->
     <script src="~/app/components/home/homeController.js"></script>
 </body>
 </html>
