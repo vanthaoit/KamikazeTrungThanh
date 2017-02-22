@@ -1,5 +1,6 @@
 ﻿using KamikazeTrungThanh.Model.Models;
 using KamikazeTrungThanh.Web.Models;
+using System;
 
 namespace KamikazeTrungThanh.Web.Infrastructure.Extensions
 {
@@ -64,6 +65,15 @@ namespace KamikazeTrungThanh.Web.Infrastructure.Extensions
             slide.DisplayOrder = slideVm.DisplayOrder;
             slide.Status = slideVm.Status;
         }
-       
+        public static void UpdateFeedback(this Feedback feedback, FeedbackViewModel feedbackVm)
+        {
+            feedback.ID = feedbackVm.ID;
+            feedback.Name = feedbackVm.Name;
+            feedback.Email = feedbackVm.Email;
+            feedback.Message = feedbackVm.Message;
+            feedback.Status = feedbackVm.Status;
+            feedback.CreatedDate = DateTime.Now;
+        }
+
     }
 }

@@ -224,6 +224,7 @@
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Models\ContactDetailViewModel.cs" />
+    <Compile Include="Models\FeedbackViewModel.cs" />
     <Compile Include="Models\ProductCategoryViewModel.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\SlideViewModel.cs" />
@@ -4762,15 +4763,6 @@
     <Content Include="Assets\client\css\table-style.css" />
     <Content Include="Assets\client\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\client\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Assets\client\images\1.jpg" />
-    <Content Include="Assets\client\images\2.jpg" />
-    <Content Include="Assets\client\images\3.jpg" />
-    <Content Include="Assets\client\images\4.jpg" />
-    <Content Include="Assets\client\images\5.jpg" />
-    <Content Include="Assets\client\images\6.jpg" />
-    <Content Include="Assets\client\images\7.jpg" />
-    <Content Include="Assets\client\images\8.jpg" />
-    <Content Include="Assets\client\images\a1.png" />
     <Content Include="Assets\client\images\a2.png" />
     <Content Include="Assets\client\images\a3.png" />
     <Content Include="Assets\client\images\a4.png" />
@@ -4840,6 +4832,7 @@
     <Content Include="Assets\client\images\img1.jpg" />
     <Content Include="Assets\client\images\img2.jpg" />
     <Content Include="Assets\client\images\img3.jpg" />
+    <Content Include="Assets\client\images\logo_tt.jpg" />
     <Content Include="Assets\client\images\m1.jpg" />
     <Content Include="Assets\client\images\m1.png" />
     <Content Include="Assets\client\images\m10.jpg" />
@@ -4867,6 +4860,7 @@
     <Content Include="Assets\client\images\m7.jpg" />
     <Content Include="Assets\client\images\m8.jpg" />
     <Content Include="Assets\client\images\m9.jpg" />
+    <Content Include="Assets\client\images\MaiHienDiDong_1.jpg" />
     <Content Include="Assets\client\images\move-up.png" />
     <Content Include="Assets\client\images\n1.jpg" />
     <Content Include="Assets\client\images\n10.jpg" />
@@ -4898,6 +4892,7 @@
     <Content Include="Assets\client\images\tick.png" />
     <Content Include="Assets\client\images\user.jpg" />
     <Content Include="Assets\client\js\bootstrap.min.js" />
+    <Content Include="Assets\client\js\controllers\Contact.js" />
     <Content Include="Assets\client\js\custom.js" />
     <Content Include="Assets\client\js\easing.js" />
     <Content Include="Assets\client\js\imagezoom.js" />
@@ -4914,6 +4909,7 @@
     <Content Include="Assets\client\js\move-top.js" />
     <Content Include="Assets\client\js\owl.carousel.js" />
     <Content Include="Assets\client\js\simplePlayer.js" />
+    <Content Include="Assets\client\template\contact_template.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Assets\client\fonts\fontawesome-webfont.eot" />
@@ -5184,7 +5180,6 @@
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\client\template\" />
     <Folder Include="UploadFiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -5195,6 +5190,8 @@
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\Portfolio\Default.cshtml" />
+    <Content Include="Views\Portfolio\Layouts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KamikazeTrungThanh.Common\KamikazeTrungThanh.Common.csproj">

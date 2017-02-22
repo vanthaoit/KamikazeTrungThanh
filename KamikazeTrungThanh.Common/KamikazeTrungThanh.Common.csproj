@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CommonConstant.cs" />
     <Compile Include="ConfigHelper.cs" />
+    <Compile Include="MailHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,14 +1,36 @@
-﻿<!-- breadcrumbs -->
+﻿@{ 
+    var listBreadcrumb = (IEnumerable<KamikazeTrungThanh.Web.Models.ProductCategoryViewModel>)ViewBag.listBreadcrumb;
+    var TheEnd = listBreadcrumb.Count();
+    var step = 0;
+}
+<!-- breadcrumbs -->
 <ol class="breadcrumb breadcrumb1">
-    <li><a href="index.html">Home</a></li>
-    <li class="active">Products</li>
+    @foreach (var item in listBreadcrumb)
+    {
+        step = step + 1;
+        if (step != TheEnd)
+        {
+            <li><a href="index.html">@item.Name</a></li>
+        }
+        else
+        {
+            <li class="active">@item.Name</li>
+        }
+    }
+    
+    
 </ol>
 <div class="clearfix"> </div>
 <!-- //breadcrumbs -->
 <div class="product-top">
-    <h4>Electronics</h4>
+    <h4>@listBreadcrumb.Last().Name</h4>
     <div class="move-text">
-        <div class="marquee"><a href="offers.html"> New collections are available here...... <span>Get extra 10% off on everything | no extra taxes </span> <span> Try shipping pass free for 15 days with unlimited</span></a></div>
+        <div class="marquee">
+            <a href="offers.html"> 
+             
+                <span>Với tiêu chí luôn vì lợi ích của khách hàng và uy tín của công ty.</span> 
+                <span>Chúng tôi hi vọng phục vụ sự phát triển của quý khách hàng mọi lúc mọi nơi.</span>
+            </a></div>
         <script src="~/Assets/client/js/jquery.marquee.min.js"></script>
         <script>
 					  $('.marquee').marquee({ pauseOnHover: true });

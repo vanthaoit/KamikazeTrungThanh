@@ -69,9 +69,15 @@
     <Compile Include="Migrations\201701060952344_initialDb.Designer.cs">
       <DependentUpon>201701060952344_initialDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702220509238_editMetaDescription.cs" />
+    <Compile Include="Migrations\201702220509238_editMetaDescription.Designer.cs">
+      <DependentUpon>201702220509238_editMetaDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ContactDetailRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\FeedbackRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Repositories\ProductCategoryRepository.cs" />
@@ -95,6 +101,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701060952344_initialDb.resx">
       <DependentUpon>201701060952344_initialDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702220509238_editMetaDescription.resx">
+      <DependentUpon>201702220509238_editMetaDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

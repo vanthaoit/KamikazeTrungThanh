@@ -1,4 +1,12 @@
-﻿<div class="movies_nav">
+﻿@{ 
+    var prefix = "portfolio" ;
+    var strUrl = HttpContext.Current.Request.Url.AbsolutePath;
+
+    var navigationMenu = (IEnumerable<KamikazeTrungThanh.Web.Models.ProductCategoryViewModel>)ViewBag.NavigationMenu;
+    var navigationMenuChild = (IEnumerable<KamikazeTrungThanh.Web.Models.ProductCategoryViewModel>)ViewBag.NavigationMenuChild;
+}
+
+<div class="movies_nav container">
     <div class="container">
         <nav class="navbar navbar-default">
             <div class="navbar-header navbar-left">
@@ -13,79 +21,178 @@
             <div class="collapse navbar-collapse navbar-right" id="navbar">
                 <nav>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Trang chủ</a></li>
-                        <li class=""><a href="index.html">Giới thiệu</a></li>
-                     
-                        <li class="">
-                            <a href="#" class="dropdown-toggle">Sản phẩm <b class="caret"></b></a>
-                            <ul class="dropdown-menu multi-column columns-3">
-                                <li>
-                             
-                                        <ul class="multi-column-dropdown">
-                                            <li><a href="genres.html">Action</a></li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Psycfhghj gjyhgkjhk gjyg<b class="caret"></b></a>
-                                                <ul class="dropdown-menu multi-column columns-3 dropdown-menu-sub">
-                                                    <li><a href="genres.html">Drama</a></li>
-                                                    <li><a href="genres.html">History</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="genres.html">Biography</a></li>
-                                            <li class="dropdown">
-                                                <a href="genres.html" class="dropdown-toggle" data-toggle="dropdown">Psychological</a>
-                                                <ul class="dropdown-menu multi-column columns-3 dropdown-menu-sub">
-                                                    <li><a href="genres.html">Drama</a></li>
-                                                    <li><a href="genres.html">History</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="genres.html">Crime</a></li>
-                                            <li><a href="genres.html">Family</a></li>
-                                            <li><a href="horror.html">Horror</a></li>
-                                            <li><a href="genres.html">Romance</a></li>
-                                            <li><a href="genres.html">Sports</a></li>
-                                           
-                                        </ul>
+                        @if (navigationMenu.Count() > 0)
+                        {
+                            var countSub = 0;
+                            foreach (var item in navigationMenu)
+                            {
+                                foreach (var tamp in navigationMenuChild)
+                                {
+                                    if (item.ID == tamp.ParentID)
+                                    {
+                                        countSub = countSub + 1;
+                                        break;
+                                    }
+
+                                }
+
+                                var UrlIndex = "/" + item.MetaKeyword + "-index.html";
+
+                                if (!string.IsNullOrEmpty(strUrl) && strUrl.Contains(item.MetaKeyword))
+                                {
+
+                                    if (countSub > 0)
+                                    {
+                                        <li class="active">
+                                            <a href="@UrlIndex" class="dropdown-toggle">@item.Name<b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu multi-column columns-3">
+                                                <li>
+                                                    <ul class="multi-column-dropdown">
+                                                       
+                                                            @foreach (var itemChild in navigationMenuChild)
+                                                            {
+                                                                if (itemChild.ParentID == item.ID)
+                                                                {
+                                                                    var countChildChild = 0;
+                                                                    foreach (var itemChildChild in navigationMenuChild)
+                                                                    {
+                                                                        if (itemChildChild.ParentID == itemChild.ID)
+                                                                        {
+                                                                            countChildChild = countChildChild + 1;
+                                                                            break;
+                                                                        }
+
+                                                                    }
+                                                                    <li class="dropdown">
+                                                                        @if (countChildChild > 0)
+                                                                        {
+                                                                            <a href="#" class="dropdown-toggle dropdown-toggle-sub" data-toggle="dropdown">@itemChild.Name<b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu multi-column columns-3 dropdown-menu-sub">
+                                                                                @foreach (var itemChildChild in navigationMenuChild)
+                                                                                {
+                                                                                    if (itemChildChild.ParentID == itemChild.ID)
+                                                                                    {
+                                                                                        var Url = "/"+ item.MetaKeyword + "-"+itemChildChild.Alias+"-"+itemChildChild.ID+".html";
+                                                                                        <li><a href="@Url">@itemChildChild.Name</a></li>
+                                                                                    }
+
+                                                                                }
+
+
+                                                                            </ul>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            var Url = "/" + item.MetaKeyword + "-" + itemChild.Alias + "-" + itemChild.ID + ".html";
+                                                                            <a href="@Url" class="dropdown-toggle dropdown-toggle-sub">@itemChild.Name</a>
+                                                                        }
+
+                                                                    </li>
+                                                                }
+
+
+
+                                                            }
+                                                            
+                                                            
+                                                 
+                                                     </ul>
+                                                </li>
+                                             </ul>
+
+                                        </li>
+                                        countSub = 0;
+
+                                    }
+                                    else
+                                    {
+                                        <li class="active">
+                                            <a href="@UrlIndex">@item.Name</a>
+                                        </li>
+                                    }
+
+                                }
+                                else
+                                {
                                     
-                                  
-                                    <div class="clearfix"></div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle">Dịch vụ <b class="caret"></b></a>
-                            <ul class="dropdown-menu multi-column columns-3">
-                                <li>
-                                    <div class="col-sm-4">
-                                        <ul class="multi-column-dropdown">
-                                            <li><a href="genres.html">Asia</a></li>
-                                            <li><a href="genres.html">France</a></li>
-                                            <li><a href="genres.html">Taiwan</a></li>
-                                            <li><a href="genres.html">United States</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <ul class="multi-column-dropdown">
-                                            <li><a href="genres.html">China</a></li>
-                                            <li><a href="genres.html">HongCong</a></li>
-                                            <li><a href="genres.html">Japan</a></li>
-                                            <li><a href="genres.html">Thailand</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <ul class="multi-column-dropdown">
-                                            <li><a href="genres.html">Euro</a></li>
-                                            <li><a href="genres.html">India</a></li>
-                                            <li><a href="genres.html">Korea</a></li>
-                                            <li><a href="genres.html">United Kingdom</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="news.html">Khuyến mãi</a></li>
-                        <li><a href="news.html">Tuyển dụng</a></li>
-                        <li><a href="news.html">Liên hệ</a></li>
+                                    if (countSub > 0)
+                                    {
+
+                                        <li class="">
+                                            
+                                            <a href="@UrlIndex" class="dropdown-toggle">@item.Name<b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu multi-column columns-3">
+                                                <li>
+                                                    <ul class="multi-column-dropdown">
+                                                        
+                                                            @foreach (var itemChild in navigationMenuChild)
+                                                            {
+                                                                if (itemChild.ParentID == item.ID)
+                                                                {
+                                                                    var countChildChild = 0;
+                                                                    foreach (var itemChildChild in navigationMenuChild)
+                                                                    {
+                                                                        if (itemChildChild.ParentID == itemChild.ID)
+                                                                        {
+                                                                            countChildChild = countChildChild + 1;
+                                                                            break;
+                                                                        }
+
+                                                                    }
+                                                                    <li class="dropdown">
+                                                                        @if (countChildChild > 0)
+                                                                        {
+                                                                            <a href="#" class="dropdown-toggle dropdown-toggle-sub" data-toggle="dropdown">@itemChild.Name<b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu multi-column columns-3 dropdown-menu-sub">
+                                                                                @foreach (var itemChildChild in navigationMenuChild)
+                                                                                {
+                                                                                    if (itemChildChild.ParentID == itemChild.ID)
+                                                                                    {
+                                                                                        var Url = "/" + item.MetaKeyword + "-" + itemChildChild.Alias + "-" + itemChildChild.ID + ".html";
+                                                                                        <li><a href="@Url">@itemChildChild.Name</a></li>
+                                                                                    }
+
+                                                                                }
+
+
+                                                                            </ul>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            var Url = "/" + item.MetaKeyword + "-" + itemChild.Alias + "-" + itemChild.ID + ".html";
+                                                                            <a href="@Url" class="dropdown-toggle dropdown-toggle-sub">@itemChild.Name</a>
+                                                                        }
+
+                                                                    </li>
+                                                                }
+
+
+
+                                                            }
+
+
+                                                       
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        countSub = 0;
+
+                                    }
+                                    else
+                                    {
+                                        <li class="">
+                                            <a href="@UrlIndex">@item.Name</a>
+                                        </li>
+                                    }
+                                }
+
+                            }
+                        }
+                        
                     </ul>
                 </nav>
             </div>

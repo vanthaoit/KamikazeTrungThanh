@@ -4,6 +4,7 @@ using KamikazeTrungThanh.Data.Repositories;
 using KamikazeTrungThanh.Model.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace KamikazeTrungThanh.Service
 {
@@ -16,6 +17,8 @@ namespace KamikazeTrungThanh.Service
         IEnumerable<Slide> GetSlide();
 
         IEnumerable<ProductCategory> GetNavigationMenu();
+
+        IEnumerable<ProductCategory> GetNavigationMenuChild(string keyword);
 
         IEnumerable<ProductCategory> GetNavigationMenuChild();
     }
@@ -74,6 +77,20 @@ namespace KamikazeTrungThanh.Service
                 responseBreadcrumb.Add(new ProductCategory() { ID = item.ID, Name = item.Name, Alias = item.Alias, MetaKeyword = item.MetaKeyword, Status = item.Status });
             }
             return responseBreadcrumb;
+        }
+
+        public IEnumerable<ProductCategory> GetNavigationMenuChild(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                return _productCategoryRepository.GetMulti(x => x.Status && x.ParentID != null && x.MetaKeyword.Contains(keyword)).OrderBy(x => x.DisplayOrder);
+            }
+
+            else
+            {
+                return _productCategoryRepository.GetMulti(x => x.Status && x.ParentID != null).OrderBy(x => x.DisplayOrder);
+            }
+                
         }
     }
 }

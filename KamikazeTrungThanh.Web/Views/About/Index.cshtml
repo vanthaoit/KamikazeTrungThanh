@@ -1,49 +1,23 @@
-﻿@{
+﻿@model KamikazeTrungThanh.Web.Models.ProductCategoryViewModel
+@{
     ViewBag.Title = "About Index";
     Layout = "~/Views/Shared/Layouts.cshtml";
 }
-<div class="content">
-    <div class="row">
-        <div class="col-lg-4">
-            <h3>Who We Are</h3>
-            <img src="~/Assets/client/images/s1.jpg" alt=""style="width:200px;height:170px;" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-        <div class="col-lg-4">
-            <h3>Our History</h3>
-            <div class="history-desc">
-                <div class="year"><p>1998 -</p></div>
-                <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="clear"></div>
-            </div>
-            <div class="history-desc">
-                <div class="year"><p>2001 -</p></div>
-                <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                <div class="clear"></div>
-            </div>
-            <div class="history-desc">
-                <div class="year"><p>2006 -</p></div>
-                <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="clear"></div>
-            </div>
-            <div class="history-desc">
-                <div class="year"><p>2010 -</p></div>
-                <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="clear"></div>
-            </div>
-            <div class="history-desc">
-                <div class="year"><p>2013 -</p></div>
-                <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <h3>Opportunities</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-           
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
+<div class="container content-wrapper">
+    <div class="content-wrapper-top">
+
+        <h4>Vài nét về Trung Thanh</h4>
+        <div class="clearfix"> </div>
+    </div>
+    <div class="content-wrapper-row">
+        <span>
+            @Html.Raw(@Model.MetaDescription)
+            
+        </span>
+        
+
     </div>
 
 </div>
+
+

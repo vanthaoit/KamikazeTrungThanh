@@ -48,6 +48,10 @@ namespace KamikazeTrungThanh.Web.Controllers
         [ChildActionOnly]
         public ActionResult Navigation()
         {
+            var navigationMenuModel = _commonService.GetNavigationMenu();
+            var navigationMenuchildModel = _commonService.GetNavigationMenuChild();
+            ViewBag.NavigationMenu = AutoMapper.Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(navigationMenuModel);
+            ViewBag.NavigationMenuChild = AutoMapper.Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(navigationMenuchildModel);
             return PartialView();
         }
         [ChildActionOnly]

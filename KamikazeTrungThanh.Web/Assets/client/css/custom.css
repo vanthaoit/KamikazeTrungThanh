@@ -10,6 +10,41 @@
     text-align:justify;
     color:black;
 }
+.content-wrapper{
+    padding-top:1em !important;
+    min-height:400px;
+    padding-right:0px;
+    padding-left:0px;
+}
+.content-wrapper-top{
+    background: #37a1f3;
+    border-color: #37a1f3;
+    border-radius: 4px 4px 0 0;
+    padding: 1em 2em;
+}
+.content-wrapper-top h4{
+    font-size: 1.3em;
+    color: #fff;
+    font-family: Arial;
+    float: left;
+    text-transform: uppercase;
+}
+.content-wrapper-row{
+    border-radius: 0 0 4px 4px;
+    padding: 20px;
+    box-shadow: 0px 0 2px #C1C1C1 !important;
+   
+}
+.content-wrapper-row span p{
+    color: #104F76;
+    font: normal 14px/22px Arial;
+    text-align:justify;
+}
+.open .dropdown-menu li a{
+    color: #0280e1;
+    font: normal 14px/22px Arial;
+    text-align:justify;
+}
 /*end about*/
 /*contact*/
 
@@ -276,8 +311,11 @@ ul.cd-dropdown-content li {
 /*-- //menu --*/
 /*-- welcome --*/
 .welcome,.deals,.card-page,.help,.values,.privacy,.sitemap,.products,.related-products,.login-page,.contact,.about,.faq-w3agile,.wthree-offers,.w3l-services{
-	padding:5em 0;
+	padding:1.5em 0;
 } 
+#slidey{
+    padding:1em 0;
+}
 h3.w3ls-title {
     text-align: left;
     font-size: 2em;
@@ -941,8 +979,8 @@ p {
 /*-- //social-icons --*/ 
 /*-- footer --*/
 .footer {
-    padding-top: 5em;
-    background: url(../images/bg.png)#42d406 no-repeat;
+    
+    background: #337ab7;
     background-size: cover;
 }
 .footer-logo.header-logo {
@@ -1132,8 +1170,9 @@ p {
 .product-top h4 {
     font-size: 1.3em;
     color: #fff;
-    font-family: 'Offside', cursive;
+    font-family: Arial;
     float: left;
+    text-transform:uppercase;
 }
 .product-top ul li a.dropdown-toggle {
     color: #fff;
@@ -1184,7 +1223,7 @@ p {
 }
 .w3ls-cart.pw3ls-cart {
     position: absolute;
-    width: 75%;
+    width: 82%;
     bottom: -50%;
 	-webkit-transition: .6s all;
 	-moz-transition: .6s all;
@@ -1199,6 +1238,14 @@ p {
 }
 .agile-products:hover  .w3ls-cart.pw3ls-cart{
 	bottom: 35%;
+     font-weight:bold;
+    color:white;
+}
+
+.w3ls-cart.pw3ls-cart:focus,agile-products:focus {
+    font-family:graham;
+   
+    color:white;
 }
 .agile-products:hover {
     border-color: #f44336;
@@ -1234,6 +1281,37 @@ p {
 	-ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+.portfolio_summary{
+    color: #104F76;
+    font: normal 13px/22px Arial;
+}
+.portfolio_summary p{
+    padding: 7px 0 0 0;
+    line-height: 18px;
+    margin-bottom: 12px;
+    color:blue;
+    
+}
+.portfolio_summary_title{
+    color: #267EAF;
+    font: bold 16px Arial;
+    text-transform:uppercase;
+} 
+.portfolio_summary_title_detail{
+    color:black;
+    text-align:justify;
+}
+.portfolio_summary_title_detail strong{
+    color:blue;
+}
+.portfolio_summary_content{
+    text-align:justify;
+ 
+}
+.portfolio_summary .img-responsive{
+    height:150% !important;
+}
 /*-- //galry-like --*/
 /*-- //products-right --*/ 
 /*-- products-left --*/ 
@@ -1246,6 +1324,7 @@ p {
 .rsidebar-top{
     border: 1px solid #cccccc;
     padding: 1em;
+    border-radius: 4px 4px;
 } 
 input.item_quantity {
     background: none;
@@ -1265,11 +1344,11 @@ input.item_quantity:hover{
 
 }
 .rsidebar h4,.related-row h4 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #f44336;
     text-transform: uppercase;
     margin-bottom: 1em;
-    font-family: 'graham';
+    font-family: Arial;
     font-weight:bold;
 }
 .checkbox {
@@ -1320,11 +1399,18 @@ input.item_quantity:hover{
     text-align: center;
 }
 /*-- start scrollpane --*/
+.sidebar-row .faq li .item-menu{
+    
+    font-size:110%;
+    font-weight:bold;
+}
+
 .sidebar-row .faq li a {
     color: #353F49;
     text-transform:uppercase;
     font-family:'graham';
 }
+
 .scroll-pane.jspScrollable {
     outline: none;
 }
@@ -1422,7 +1508,8 @@ input#amount {
     text-decoration: none;
 }
 .faq > li > a:hover,.faq > li >a.active{
-	color: #000;
+	color: #0280E1;
+    font-size:110%;
 }
 .faq li a.active span {
 	-webkit-transform: rotatex(180deg);
@@ -1445,7 +1532,9 @@ input#amount {
     color: #ff590f;
 }
 .faq span.glyphicon {
+    font-weight: bold;
     float: right;
+    top:4px !important;
 }
 /*-- //faq --*/ 
 .related-row {
@@ -1468,9 +1557,7 @@ input#amount {
     border-color:#009688; 
     color: #009688;
 }
-.recommend {
-    margin-top: 4em;
-}
+
 /*-- //products-page --*/
 /*-- login-page --*/
 .login-page{

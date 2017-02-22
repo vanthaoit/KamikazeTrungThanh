@@ -2,7 +2,7 @@
 @{ 
     var countSlide = Model.Count();
 }
-<div id="slidey" data-value="@countSlide" style="display:none;">
+<div id="slidey" class="container" data-value="@countSlide" style="display:none;">
     <ul>
         @foreach (var item in Model)
         {
@@ -12,8 +12,10 @@
                     @item.Name
                 </p>
                 <p class='description'>
-                    @item.Description
+                    <span>@item.Description</span>
+                   
                 </p>
+                
             </li>
         }
         

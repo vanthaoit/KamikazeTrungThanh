@@ -85,6 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //Latest-tv-series -->
     <!-- footer -->
    @{ Html.RenderAction("Footer","Home");}
+   
     <!-- //footer -->
     <!-- Bootstrap Core JavaScript -->
     <script src="~/Assets/client/js/bootstrap.min.js"></script>
@@ -121,5 +122,8 @@ $(document).ready(function(){
 			});
     </script>
     <!-- //here ends scrolling icon -->
+
+    @RenderSection("FooterJS", required: false)
+    
 </body>
 </html>

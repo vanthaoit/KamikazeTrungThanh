@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Portfolio Index";
+    Layout = "~/Views/Shared/Layouts.cshtml";
+
+   
+    var aliasDefault = (string)ViewBag.aliasDefault;
+    var idDefault = (int)ViewBag.idDefault;
+
+}
+
+<div class="products container">
+    
+    @{ Html.RenderAction("ProductCategoryPartialView", "Portfolio", new { ikeyword = "portfolio" });}
+
+    <div id="product">
+           
+        @{Html.RenderAction("Default", "Portfolio",new { alias = aliasDefault}); }
+
+    </div>
+
+    <div class="clearfix"> </div>
+    <!-- recommendations -->
+    @{ Html.RenderAction("Bottom", "Home");}
+    <!-- //recommendations -->
+  
+    <div class="clearfix"></div>
+</div>
+

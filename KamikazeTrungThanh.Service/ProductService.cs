@@ -3,6 +3,7 @@ using KamikazeTrungThanh.Data.Repositories;
 using KamikazeTrungThanh.Model.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace KamikazeTrungThanh.Service
 {
@@ -19,6 +20,8 @@ namespace KamikazeTrungThanh.Service
         IEnumerable<Product> GetAll(string keyword);
 
         IEnumerable<Product> GetAllByCategoryId(int id);
+
+        IEnumerable<Product> GetAllByAlias(string alias);
 
         IEnumerable<Product> Search(string keyword, int page, int pageSize, out int totalRow, string sort);
 
@@ -60,6 +63,18 @@ namespace KamikazeTrungThanh.Service
             else
                 return _productRepository.GetAll();
 
+        }
+
+        public IEnumerable<Product> GetAllByAlias(string alias)
+        {
+            if (!string.IsNullOrEmpty(alias))
+            {
+                return _productRepository.GetMulti(x => x.Alias.Contains(alias)).OrderBy(x=>x.UpdatedDate);
+            }
+            else
+            {
+                return _productRepository.GetAll().OrderBy(x => x.UpdatedDate);
+            }
         }
 
         public IEnumerable<Product> GetAllByCategoryId(int id)

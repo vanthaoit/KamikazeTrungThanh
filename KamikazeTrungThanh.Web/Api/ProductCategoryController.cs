@@ -27,7 +27,7 @@ namespace KamikazeTrungThanh.Web.Api
           
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize)
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize=20)
         {
             return CreateHttpResponse(request, () =>
             {

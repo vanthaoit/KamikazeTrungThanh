@@ -41,8 +41,10 @@
                         <tr>
                             <td><input name="all" type="checkbox" ng-click="selectAll()" /></td>
                             <th style="width: 5%">ID</th>
-                            <th style="width:55%">Tên sản phẩm</th>
-                            <th style="width: 20%">Ngày tạo</th>
+                            <th style="width:43%">Tên sản phẩm</th>
+                            <th style="width:7%">Hình ảnh</th>
+                            <th style="width:5%">Loại</th>
+                            <th style="width: 20%">Ngày cập nhật</th>
                             <th style="width: 10%">Trạng thái</th>
                             <th style="width: 10%">Thao tác</th>
                         </tr>
@@ -51,7 +53,11 @@
                             <td>{{item.ID}}</td>
                             <td>{{item.Name}}</td>
                             <td>
-                                {{item.CreatedDate  | date:'dd/MM/yyyy hh:mm:ss'}}
+                                <img ng-src="{{item.Image}}" width="100" height="50" />
+                            </td>
+                            <td>{{item.CategoryID}}</td>
+                            <td>
+                                {{item.UpdatedDate  | date:'dd/MM/yyyy hh:mm:ss'}}
                             </td>
                             <!--class="badge bg-red"-->
                             <td>

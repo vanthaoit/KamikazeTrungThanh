@@ -14,9 +14,33 @@ namespace KamikazeTrungThanh.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "About Index",
+                url: "about-index.html",
+                defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional},
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Portfolio Index",
+                url: "portfolio-index.html",
+                defaults: new { controller = "Portfolio", action = "Layouts", alias = "", id = 0 },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+
+            routes.MapRoute(
+                name: "Portfolio Layouts",
+                url: "portfolio-{alias}-{id}.html",
+                defaults: new { controller = "Portfolio", action = "Layouts", id = UrlParameter.Optional },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
             );
         }
     }

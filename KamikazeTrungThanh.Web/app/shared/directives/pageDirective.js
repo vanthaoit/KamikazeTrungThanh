@@ -1,9 +1,9 @@
 ﻿(function (app) {
     'use strict';
 
-    app.directive('pageDirective', pageDirective);
+    app.directive('pagerDirective', pagerDirective);
 
-    function pageDirective() {
+    function pagerDirective() {
         return {
             scope: {
                 page: '@',
