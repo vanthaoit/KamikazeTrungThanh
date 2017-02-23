@@ -15,6 +15,7 @@ using System.Web.Script.Serialization;
 namespace KamikazeTrungThanh.Web.Api
 {
     [RoutePrefix("api/product")]
+    [Authorize]
     public class ProductController : ApiControllerBase
     {
         #region Initialize

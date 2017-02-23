@@ -14,6 +14,13 @@ namespace KamikazeTrungThanh.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+               name: "Home Index",
+               url: "home-index.html",
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+           );
+
+            routes.MapRoute(
                 name: "About Index",
                 url: "about-index.html",
                 defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional},
@@ -32,6 +39,34 @@ namespace KamikazeTrungThanh.Web
                 name: "Portfolio Layouts",
                 url: "portfolio-{alias}-{id}.html",
                 defaults: new { controller = "Portfolio", action = "Layouts", id = UrlParameter.Optional },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Services Index",
+                url: "services-index.html",
+                defaults: new { controller = "Services", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Discount Index",
+                url: "discount-index.html",
+                defaults: new { controller = "Discount", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Recruitment Index",
+                url: "recruitment-index.html",
+                defaults: new { controller = "Recruitment", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+                name: "Contact Index",
+                url: "contact-index.html",
+                defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional },
                  namespaces: new string[] { "KamikazeTrungThanh.Web.Controllers" }
             );
 

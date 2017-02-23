@@ -68,11 +68,7 @@ namespace KamikazeTrungThanh.Web.Controllers
             return PartialView();
         }
 
-        [ChildActionOnly]
-        public ActionResult Bottom()
-        {
-            return PartialView();
-        }
+        
 
         [ChildActionOnly]
         public ActionResult Footer()

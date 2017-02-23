@@ -1,5 +1,8 @@
 ﻿namespace KamikazeTrungThanh.Data.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Model.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -28,7 +31,37 @@
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            CreateContactDetail(context);
+            //CreateContactDetail(context);
+            //CreateUser(context);
+        }
+
+        private void CreateUser(KamikazeTrungThanhDbContext context)
+        {
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new KamikazeTrungThanhDbContext()));
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new KamikazeTrungThanhDbContext()));
+
+            var user = new ApplicationUser()
+            {
+                UserName = "KamikazeTrungThanh",
+                Email = "vietnamthaotranvan@gmail.com",
+                EmailConfirmed = true,
+                //BirthDay = DateTime.Now,
+                //FullName = " Administrator"
+            };
+
+            //manager.Create(user, "123456");
+            manager.Create(user, "adminktt@123456");
+
+            if (!roleManager.Roles.Any())
+            {
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                //roleManager.Create(new IdentityRole { Name = "User" });
+            }
+
+            //var adminUser = manager.FindByEmail("vietnamthaotranvan@gmail.com");
+
+            //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }
 
         private void CreateContactDetail(KamikazeTrungThanhDbContext context)

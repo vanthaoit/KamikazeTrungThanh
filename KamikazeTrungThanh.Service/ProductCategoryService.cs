@@ -3,6 +3,7 @@ using KamikazeTrungThanh.Data.Repositories;
 using KamikazeTrungThanh.Model.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace KamikazeTrungThanh.Service
 {
@@ -23,6 +24,8 @@ namespace KamikazeTrungThanh.Service
         ProductCategory GetById(int id);
 
         ProductCategory GetByAlias(string alias);
+
+        IEnumerable<ProductCategory> GetTopProductCategory(int top);
 
         void Save();
     }
@@ -74,6 +77,11 @@ namespace KamikazeTrungThanh.Service
         public ProductCategory GetById(int id)
         {
             return _productCategoryRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<ProductCategory> GetTopProductCategory(int top)
+        {
+            return _productCategoryRepository.GetMulti(x => x.Status && x.Description.Contains("end")).OrderByDescending(x => x.CreatedDate).Take(top);
         }
 
         public void Save()

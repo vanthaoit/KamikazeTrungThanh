@@ -6,12 +6,9 @@
 
 @section FooterJS{
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY9-9EcRD3c0dL6gsT_Dd5Y4mlbW2Vgp0"></script>
-    
+
     <script src="~/Assets/client/js/controllers/Contact.js"></script>
 }
-
-
-
 
 <input type="hidden" id="hidAddress" value="@Model.ContactDetail.Name<br />Điện thoại: @Model.ContactDetail.Phone <br>Địa chỉ: @Model.ContactDetail.Address" />
 <input type="hidden" id="hidLat" value="@Model.ContactDetail.Lat" />
@@ -43,7 +40,6 @@
                         </div>
                         <h3>Call</h3>
                         <h4>@Model.ContactDetail.Phone</h4>
-                       
                     </div>
                     <div class="col-md-3 mail-wthree">
                         <div class="icon-w3">
@@ -51,7 +47,6 @@
                         </div>
                         <h3>Email</h3>
                         <h4><a href="@Model.ContactDetail.Email">@Model.ContactDetail.Email</a></h4>
-                        
                     </div>
                     <div class="col-md-3 social-w3l">
                         <div class="icon-w3">
@@ -60,34 +55,32 @@
                         <h3>Social media</h3>
                         <ul>
                             <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i><span class="text">Facebook</span></a></li>
-                         
+
                             <li class="ggp"><a href="https://mail.google.com/mail/"><i class="fa fa-google-plus" aria-hidden="true"></i><span class="text">Google+</span></a></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
-                    
                 </div>
-                <div class="row contact-us" >
+                <div class="row contact-us">
                     @using (Html.BeginForm("SendFeedback", "Contact", FormMethod.Post))
                     {
-                       
 
                         @Html.ValidationSummary(false, "", new { @class = "error" })
                         <div class="control-group form-group">
                             <div class="controls">
-                                @Html.TextBoxFor(model => model.Name, new { @class = "textbox form-control",@placeholder="Họ và Tên",@required="" })
+                                @Html.TextBoxFor(model => model.Name, new { @class = "textbox form-control", @placeholder = "Họ và Tên", @required = "" })
                             </div>
                         </div>
 
                         <div class="control-group form-group">
                             <div class="controls">
-                                
+
                                 @Html.TextBoxFor(model => model.Email, new { @class = "textbox form-control", @placeholder = "Email", @required = "" })
                             </div>
                         </div>
                         <div class="control-group form-group">
                             <div class="controls">
-                               
+
                                 @Html.TextAreaFor(model => model.Message, new { @class = "form-control", @placeholder = "Nội dung phản hồi", @required = "" })
                             </div>
                         </div>
@@ -102,7 +95,6 @@
 
                         <input type="submit" value="Gửi phản hồi">
                     }
-                    
                 </div>
             </div>
         </div>
@@ -111,21 +103,21 @@
 
 <!-- Map-JavaScript -->
 @*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-<script type="text/javascript">
-    google.maps.event.addDomListener(window, 'load', init);
-    function init() {
-        var mapOptions = {
-            zoom: 11,
-            center: new google.maps.LatLng(40.6700, -73.9400),
-            styles: [{ "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 21 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 19 }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 17 }] }]
-        };
-        var mapElement = document.getElementById('map');
-        var map = new google.maps.Map(mapElement, mapOptions);
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.6700, -73.9400),
-            map: map,
-        });
-    }
-</script>*@
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', init);
+        function init() {
+            var mapOptions = {
+                zoom: 11,
+                center: new google.maps.LatLng(40.6700, -73.9400),
+                styles: [{ "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 21 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 19 }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 17 }] }]
+            };
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+            });
+        }
+    </script>*@
 <!-- //Map-JavaScript -->
 <!-- //contact -->
