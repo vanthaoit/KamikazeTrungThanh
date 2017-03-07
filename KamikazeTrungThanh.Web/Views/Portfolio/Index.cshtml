@@ -2,7 +2,7 @@
 @{ 
     var aliasDefault = (string)ViewBag.aliasDefault;
 }
-<div class="col-md-9 product-w3ls-right">
+<div class="product-w3ls-right">
     @{ Html.RenderAction("ProductHeaderPartialView", "Portfolio",new { alias = aliasDefault});}
     <div class="products-row">
         @if (Model.Count() > 0)

@@ -1204,29 +1204,7 @@ h3.head {
 		font-size: 1.7em !important;
 	}
 }
-@media (max-width:768px){
-	.w3ls_footer_grid_left1 h2 {
-		font-size: 1.7em;
-	}
-	h3.head {
-		font-size: 2.2em;
-	}
-	/*-- icons --*/
-	h3.agileits-icons-title {
-		font-size: 28px;
-	}
-	h3.icon-subheading {
-		font-size: 25px;
-	}
-	.row {
-		margin-right: 0;
-		margin-left: 0;
-	}
-	.icon-box {
-		margin: 0;
-	}
-	/*-- //icons --*/
-}
+
 @media (max-width:767px){
 	.navbar-toggle {
 		float: none;

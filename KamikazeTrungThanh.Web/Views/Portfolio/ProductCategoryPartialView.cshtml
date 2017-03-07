@@ -4,10 +4,13 @@
 }
 
     
-    <div class="col-md-3 rsidebar">
+    <div class="col-md-3">
+        <div class="product-top">
+            <h4> Danh mục sản phẩm</h4>
+        </div>
         <div class="rsidebar-top">
             <div class="sidebar-row">
-                <h4> Danh mục sản phẩm</h4>
+                
                 <ul class="faq">
                     @foreach (var item in Model)
                     {
@@ -70,32 +73,19 @@
             </div>
 
         </div>
+        @{ 
+            var UrlCare = "/portfolio-"+Model.FirstOrDefault().Alias+"-"+Model.FirstOrDefault().ID+".html" ;
+        }
         <div class="related-row">
-            <h4>Related Searches</h4>
-            <ul>
-                <li><a href="products.html">Air conditioner </a></li>
-                <li><a href="products.html">Gaming</a></li>
-                <li><a href="products.html">Monitors</a></li>
-                <li><a href="products.html">Pc </a></li>
-                <li><a href="products.html">Food Processors</a></li>
-                <li><a href="products.html">Oven</a></li>
-                <li><a href="products.html">Purifiers</a></li>
-                <li><a href="products.html">Oven</a></li>
-                <li><a href="products.html">Cleaners</a></li>
-                <li><a href="products.html">Small devices</a></li>
-            </ul>
-        </div>
-        <div class="related-row">
-            <h4>YOU MAY ALSO LIKE</h4>
+            <h4>Bạn quan tâm</h4>
             <div class="galry-like">
-                <a href="single.html"><img src="~/Assets/client/images/e1.png" class="img-responsive" alt="img"></a>
-                <h4><a href="products.html">Audio speaker</a></h4>
-                <h5>$100</h5>
+                <a href="@UrlCare"><img src="@Model.FirstOrDefault().Image" class="img-responsive" alt="img"></a>
+                <br />
+                <h4><a href="@UrlCare">@Model.FirstOrDefault().Name</a></h4>
+                
             </div>
         </div>
     </div>
-
-
 
 <!-- script for tabs -->
 <script type="text/javascript">
@@ -131,7 +121,7 @@
                 $.ajax({
                     async: true,
                     url: '@Url.Action("Index","Portfolio")',
-                                  
+
                     data: { 'aliasProductCategory': aliasProductCategory },
                     type: "POST",
                     success: function (data) {

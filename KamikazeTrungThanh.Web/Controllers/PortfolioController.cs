@@ -95,7 +95,7 @@ namespace KamikazeTrungThanh.Web.Controllers
         [ChildActionOnly]
         public ActionResult Bottom()
         {
-            var modelData = _productCategoryService.GetTopProductCategory(6);
+            var modelData = _productCategoryService.GetTopProductCategory(8);
             var modelViewResponseData = AutoMapper.Mapper.Map<IEnumerable<ProductCategory> ,IEnumerable<ProductCategoryViewModel>>(modelData);
             return PartialView(modelViewResponseData);
         }

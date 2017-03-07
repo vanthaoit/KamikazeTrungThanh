@@ -22,14 +22,15 @@
 </ol>
 <div class="clearfix"> </div>
 <!-- //breadcrumbs -->
+
 <div class="product-top">
     <h4>@listBreadcrumb.Last().Name</h4>
     <div class="move-text">
         <div class="marquee">
             <a href="offers.html"> 
-             
-                <span>Với tiêu chí luôn vì lợi ích của khách hàng và uy tín của công ty.</span> 
-                <span>Chúng tôi hi vọng phục vụ sự phát triển của quý khách hàng mọi lúc mọi nơi.</span>
+ 
+                    @Html.Raw(@listBreadcrumb.Last().MetaDescription)
+         
             </a></div>
         <script src="~/Assets/client/js/jquery.marquee.min.js"></script>
         <script>

@@ -49,6 +49,17 @@
 /*contact*/
 
 /*end contact*/
+
+.warranty {
+    min-height:400px;
+    padding:20px;
+    text-align:center;
+
+}
+.warranty h2{
+    color:red;
+    font-weight:bold;
+}
 /*-- header --*/
 .w3ls-header {
     background: #464646;
@@ -295,7 +306,7 @@ ul.cd-dropdown-content li {
     font-size: 1em;
     overflow: hidden;
 }
-.marquee a {
+.marquee a,.marquee a p  {
     color: #fff;
     letter-spacing: 1px;
 	text-transform: capitalize;
@@ -318,10 +329,12 @@ ul.cd-dropdown-content li {
 }
 h3.w3ls-title {
     text-align: left;
-    font-size: 2em;
-    color: #000;
+    font-size: 1.6em;
+    color: #31708f;
     margin: 1em 0;
-    font-family: 'Offside', cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'arial', cursive;
 }
 .welcome-grids {
     float: left;
@@ -982,6 +995,13 @@ p {
     
     background: #337ab7;
     background-size: cover;
+    border-radius:10px 10px 0 0;
+    padding: 10px 0;
+}
+.footer span{
+    font-family:tahoma,geneva,sans-serif;
+    color:#d3d3d3;
+    font-size:12px;
 }
 .footer-logo.header-logo {
     float: none;
@@ -1130,7 +1150,7 @@ p {
 }
 /*-- products-right --*/
 .product-w3ls-right {
-    float: right;
+    
     padding: 0;
 }
 .breadcrumb.breadcrumb1  > li { 
@@ -1155,7 +1175,8 @@ p {
     border-radius:4px 4px 0 0;
     /*background: url(../images/bg.png) #0362DB repeat;*/
     /*background: #FF8D1B;*/
-    padding: 1em 2em;
+    padding: 1em 1em;
+    min-height:50px;
 }
 .products-row {
     border-radius: 0 0 4px 4px;
@@ -1168,7 +1189,7 @@ p {
 	margin-left: 2em;
 } 
 .product-top h4 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #fff;
     font-family: Arial;
     float: left;
@@ -1318,13 +1339,13 @@ p {
 .rsidebar {
     display: block;
     float: left;
-    width: 22%;
+    
 	padding:0;
 }
 .rsidebar-top{
     border: 1px solid #cccccc;
-    padding: 1em;
-    border-radius: 4px 4px;
+    padding: 0em 1em 1em 1em;
+    border-radius: 0px 0px 5px 5px;
 } 
 input.item_quantity {
     background: none;
@@ -1343,7 +1364,8 @@ input.item_quantity:hover{
 .sidebar-row {
 
 }
-.rsidebar h4,.related-row h4 {
+
+.related-row h4 {
     font-size: 1.2em;
     color: #f44336;
     text-transform: uppercase;
@@ -2174,8 +2196,9 @@ p.single-price-text {
 	display: inline-block;
 }
 .single-top-right .w3ls-cart:hover{
-    background: #0280e1;
-	border-color: #0280e1;
+    background: #fff;
+	border-color: #fff;
+    font-weight:bold;
 }
 .single-top-right .w3ls-cart i.fa {
     margin-right: 3px;
@@ -2438,11 +2461,788 @@ p.sbmincart-empty-text {
 }
 /*-- //index-modal --*/ 
 /*-- responsive-design --*/
+@media only screen and (min-width:1366px) and (max-width:1444px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+  
+
+   
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+  
+
+    .product-top{
+        min-height:40px !important;
+        
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:260px;
+    }
+   
+    
+}
+
+
+@media only screen and (min-width:1280px) and (max-width:1365px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+  
+
+   
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+  
+
+    .product-top{
+        min-height:40px !important;
+        
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:260px;
+    }
+  
+}
+
+@media only screen and (min-width:1080px) and (max-width:1279px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+  
+
+   
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+  
+
+    .product-top{
+        min-height:40px !important;
+        
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:260px;
+    }
+  
+}
+
+@media only screen and (min-width:1024px) and (max-width:1079px){
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+  
+
+   
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+  
+
+    .product-top{
+        min-height:40px !important;
+        
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:260px;
+    }
+  
+}
+
+@media only screen and (min-width:991px) and (max-width:1023px){
+   .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:260px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
+@media only screen and (min-width:800px) and (max-width:990px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
+@media only screen and (min-width:768px) and (max-width:799px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+@media only screen and (min-width:736px) and (max-width:767px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+}
+@media only screen and (min-width:667px) and (max-width:735px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+@media only screen and (min-width:640px) and (max-width:666px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+@media only screen and (min-width:600px) and (max-width:639px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
+@media only screen and (min-width:568px) and (max-width:599px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+@media only screen and (min-width:480px) and (max-width:567px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
+@media only screen and (min-width:414px) and (max-width:479px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
+@media only screen and (min-width:384px) and (max-width:413px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
+@media only screen and (min-width:375px) and (max-width:383px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+@media only screen and (min-width:320px) and (max-width:374px){
+    .container{
+        
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+    .w3layouts_logo{
+        width:auto;
+    }
+
+    .faq span.glyphicon{
+        float:none;
+    }
+    .products{
+       padding:10px 0px !important ;
+    }
+    .faq{
+        padding:0 0 !important;
+        padding-left:0px !important;
+    }
+    .related-row{
+        display:none;
+    }
+
+    .product-top{
+        min-height:40px !important;
+        margin-top:10px;
+    }
+    .product-top h4{
+        font-size:0.8em !important;
+    }
+
+    .agile-products{
+        min-height:230px;
+    }
+    .breadcrumb{
+        display:none;
+    }
+    .location-agileinfo,.call-agileits,.mail-wthree,.social-icons,.social-w3l{
+        display:none;
+    }
+   
+
+
+    .sidebar-row .faq li a{
+
+    }
+  
+}
+
 @media(max-width:1440px){ 
 }
 @media(max-width:1366px){
 .welcome, .deals, .card-page, .help, .values, .privacy, .sitemap, .products, .related-products, .login-page, .contact, .about, .faq-w3agile, .wthree-offers, .w3l-services {
-    padding: 2em 0;
+    padding: 1.2em 0;
 }
 .login-body { 
     width: 45%; 
@@ -2520,9 +3320,7 @@ h3.w3ls-title {
 .subscribe input[type="submit"] { 
     padding: 0.8em 1.5em; 
 }
-.footer {
-    padding-top: 4em; 
-}
+
 .address-right:before { 
     bottom: -166px;
     left: -36px;

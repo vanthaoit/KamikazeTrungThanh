@@ -74,7 +74,7 @@ namespace KamikazeTrungThanh.Service
             {
                 int idTamp = familyTree[i];
                 var item = _productCategoryRepository.GetSingleById(familyTree[i]);
-                responseBreadcrumb.Add(new ProductCategory() { ID = item.ID, Name = item.Name, Alias = item.Alias, MetaKeyword = item.MetaKeyword, Status = item.Status });
+                responseBreadcrumb.Add(new ProductCategory() { ID = item.ID, Name = item.Name, Alias = item.Alias, MetaKeyword = item.MetaKeyword,MetaDescription = item.MetaDescription, Status = item.Status });
             }
             return responseBreadcrumb;
         }

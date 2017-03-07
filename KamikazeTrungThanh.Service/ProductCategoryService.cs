@@ -71,7 +71,7 @@ namespace KamikazeTrungThanh.Service
 
         public ProductCategory GetByAlias(string alias)
         {
-            return _productCategoryRepository.GetSingleByCondition(x => x.Name.Contains(alias) || x.Alias.Contains(alias));
+            return _productCategoryRepository.GetSingleByCondition(x => x.Alias.Contains(alias));
         }
 
         public ProductCategory GetById(int id)
