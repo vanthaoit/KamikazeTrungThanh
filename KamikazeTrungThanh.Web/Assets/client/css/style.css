@@ -121,7 +121,7 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 .w3_search input[type="submit"]{
 	outline: none;
     border: none;
-    background: #212121;
+    background: #37A1F3;
     padding: 10px 0;
     font-size: 14px;
     color: #fff;
@@ -1236,19 +1236,10 @@ h3.head {
 	.navbar-nav .open .dropdown-menu {
 		background-color: #fff;
 	}
-	ul.dropdown-menu.multi-column {
-		text-align: center;
-		float: none;
-		width: 100%;
-	}
+	
 }
 @media (max-width: 736px){
-	.w3l_sign_in_register {
-		width: 100%;
-		float: none;
-		margin: 4em 0 0;
-		text-align: center;
-	}
+	
 	.w3_search {
 		margin-left: 0;
 		float: right;
@@ -1276,9 +1267,7 @@ h3.head {
 	.w3_agileits_icons_page {
 		margin-top: 25px !important;
 	}
-	.w3l_sign_in_register ul li:first-child {
-		padding-right: 1em;
-	}
+	
 	.w3ls_footer_grid_left1_pos input[type="email"] {
 		width: 73.9%;
 	}
@@ -1327,13 +1316,7 @@ h3.head {
 	}
 }
 @media (max-width: 480px){
-	.w3layouts_logo a h1 {
-		font-size: 2.5em;
-		background: url(../images/1.jpg) no-repeat 71px 6px;
-		background-size: 40%;
-		padding-right: 1.4em;
-		padding-bottom: 0.2em;
-	}
+	
 	.w3_search {
 		width: 60%;
 	}
@@ -1423,23 +1406,8 @@ h3.head {
 	.w3ls_footer_grid_right {
 		width: 46%;
 	}
-	.w3layouts_logo {
-		float: none;
-		width: 40%;
-		margin: 0 auto;
-	}
-	.w3layouts_logo a h1 {
-		background: url(../images/1.jpg) no-repeat 75px 5px;
-		background-size: 46%;
-	}
-	.w3_search {
-		width: 100%;
-		float: none;
-		margin: 1em 0;
-	}
-	.w3l_sign_in_register {
-		margin: 0;
-	}
+	
+	
 	.modal-header {
 		font-size: 1.8em;
 	}
@@ -1487,11 +1455,7 @@ h3.head {
 	}
 }
 @media (max-width: 320px){
-	.w3layouts_logo a h1 {
-		background: url(../images/1.jpg) no-repeat 61px 5px;
-		background-size: 46%;
-		font-size: 2em;
-	}
+	
 	.modal-header {
 		font-size: 1.5em;
 	}
